@@ -1,0 +1,1604 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>SVREC | HOME</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- start to copy the links here -->
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600&family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.theme.default.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <link rel="icon" href="data:,">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Upto this copy the css  -->
+
+    <!-- Template Stylesheet -->
+    <link href="css/style1.css" rel="stylesheet">
+    <link href="../css/responsive.css" rel="stylesheet">
+
+    <style>
+      body {
+            font-family: 'open', sans-serif;
+        }   
+        h1:not(.college-name) {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1.05rem;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                font-size: 15px;
+            }
+
+            h1:not(.college-name) {
+                font-size: 1.8rem !important;
+            }
+
+            h2:not(.section-about-title) {
+                font-size: 1.5rem !important;
+            }
+
+            p {
+                font-size: 1rem !important;
+            }
+
+            /* Keep college ribbon readable but original */
+            .college-name {
+                font-size: 24px !important;
+            }
+
+            .address {
+                font-size: 12px !important;
+            }
+
+            /* About Section Mobile Fixes */
+            .about-text-container {
+                padding-left: 15px !important;
+                padding-right: 15px !important;
+                text-align: center;
+            }
+
+            .about-text-container h2,
+            .about-text-container p {
+                padding-left: 0 !important;
+            }
+
+            .minabtbtn {
+                margin-left: 0 !important;
+                margin-top: 15px !important;
+            }
+
+            /* Gallery Tab Fixes */
+            .nav-pills .nav-item {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            .nav-pills .nav-link span {
+                width: 100% !important;
+            }
+
+            /* Testimonial Fix */
+            .testimonial-item div[style*="margin-top: -35px"] {
+                margin-top: 0 !important;
+                padding-top: 15px;
+            }
+
+            /* Dept Header Fix */
+            .dept-header .badge {
+                font-size: 20px !important;
+                padding: 6px 12px !important;
+            }
+
+            .dept-header .title {
+                font-size: 24px !important;
+            }
+
+            /* Highlight Card Ribbon Fix */
+            .dept-card.highlight-card::after {
+                font-size: 0.5rem !important;
+                padding: 3px 25px !important;
+                right: -25px !important;
+                top: 15px !important;
+            }
+        }
+
+        /* Custom Responsive Helpers */
+        .mobile-center {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .minimgbtn {
+                margin-left: 0 !important;
+                display: block;
+                margin: 20px auto;
+            }
+        }
+
+        /* --- Improved Department Cards --- */
+        .dept-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        .dept-card {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 28px;
+            position: relative;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid #edf2f7;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            text-decoration: none !important;
+            height: 100%;
+            box-shadow: 0 4px 6px -1px rgba(1, 12, 84, 0.902);
+            width:100%;
+max-width:100%;
+        }
+
+        .dept-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0, 102, 255, 0.04) 0%, transparent 100%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .dept-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 102, 255, 0.1), 0 10px 10px -5px rgba(0, 102, 255, 0.04);
+            border-color: #0066ff;
+        }
+
+        .dept-card:hover::before {
+            opacity: 1;
+        }
+
+        .section-header-container {
+            max-width: 900px;
+        }
+
+        @media (max-width: 768px) {
+            .section-header-container {
+                max-width: 100%;
+                padding: 0 15px;
+            }
+        }
+
+        .dept-icon-box {
+            width: 52px;
+            height: 52px;
+            background: #f1f5f9;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            color: #0066ff;
+            margin-bottom: 20px;
+            transition: all 0.4s ease;
+            border: 1px solid #e2e8f0;
+            flex-shrink: 0;
+        }
+
+        .dept-card:hover .dept-icon-box {
+            background: #0066ff;
+            color: #ffffff;
+            transform: scale(1.05) rotate(-3deg);
+            box-shadow: 0 10px 15px rgba(0, 102, 255, 0.25);
+            border-color: #0066ff;
+        }
+
+        .dept-badge {
+            display: inline-block;
+            padding: 4px 10px;
+            background: #f0f7ff;
+            color: #0066ff;
+            border-radius: 6px;
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            width: fit-content;
+        }
+
+        .dept-name {
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: #0f172a;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+
+        .dept-desc {
+            color: #64748b;
+            font-size: 0.92rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .dept-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 20px;
+            border-top: 1px solid #f1f5f9;
+            padding-top: 18px;
+        }
+
+        .dept-stat-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .dept-stat-item .val {
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: #1e293b;
+        }
+
+        .dept-stat-item .lbl {
+            font-size: 0.7rem;
+            color: #94a3b8;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 0.4px;
+        }
+
+        .dept-explore {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: #0066ff;
+            font-weight: 700;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            padding-top: 10px;
+        }
+
+        .dept-explore i {
+            transition: transform 0.3s ease;
+        }
+
+        .dept-card:hover .dept-explore i {
+            transform: translateX(4px);
+        }
+
+        /* --- Header for Departments --- */
+        .dept-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 50px auto;
+        }
+
+        .dept-header .badge {
+            background: #0066ff;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 100px;
+            font-size: 35px;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .carousel-header {
+            height: 100%;
+            border-bottom-right-radius: 15px;
+            border-bottom-left-radius: 15px;
+            border-top-right-radius: 15px;
+            border-top-left-radius: 15px;
+            /* CHANGE HEIGHT HERE */
+        }
+
+        .carousel-header .carousel-inner,
+        .carousel-header .carousel-item,
+        .carousel-header .carousel-item img {
+            height: 100%;
+        }
+
+        .carousel-header .carousel-item img {
+            object-fit: cover;
+            width: 100%;
+        }
+
+        .carousel-header .carousel-control-prev,
+        .carousel-header .carousel-control-next {
+            background: transparent;
+        }
+
+        .carousel-header {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            overflow: hidden;
+            background: #000;
+            /* fallback */
+        }
+
+        .carousel-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+
+        /* ----- VISITOR COUNTER STYLES (ADDED) ----- */
+        .visitor-counter-container {
+            position: relative;
+            width: 100%;
+        }
+
+        .visitor-counter {
+            position: relative;
+            /* stays in normal flow but allows offsets */
+            margin: 40px auto 0;
+            /* center horizontally */
+            width: fit-content;
+
+            background: linear-gradient(135deg, #0066ff, #0046b6);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 8px 25px rgba(0, 102, 255, 0.6);
+            z-index: 10;
+        }
+
+
+
+        .visitor-counter i {
+            font-size: 20px !important;
+            color: #ffd700 !important;
+            text-shadow: 0 0 5px rgba(255, 215, 0, 0.5) !important;
+        }
+
+        .visitor-counter .count-badge {
+            background: rgba(255, 255, 255, 0.3) !important;
+            padding: 5px 16px !important;
+            border-radius: 40px !important;
+            font-weight: 900 !important;
+            color: white !important;
+            border: 2px solid rgba(255, 255, 255, 0.3) !important;
+            font-size: 18px !important;
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1) !important;
+        }
+
+        .visitor-counter-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+        /* --- Premium News Cards --- */
+        .news-card {
+            border: none !important;
+            border-radius: 24px !important;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            background: #ffffff;
+            box-shadow: 0 10px 30px rgba(18, 58, 122, 0.08) !important;
+            height: 100%;
+        }
+
+        .news-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(18, 58, 122, 0.15) !important;
+        }
+
+        .news-card .card-header {
+            padding: 22px !important;
+            font-size: 1.25rem !important;
+            border: none !important;
+            background: linear-gradient(135deg, var(--header-bg, #1d4ed8), var(--header-accent, #3b82f6)) !important;
+            color: white !important;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 800 !important;
+        }
+
+        .news-body {
+            padding: 20px !important;
+            max-height: 450px;
+            overflow-y: auto;
+            scrollbar-width: thin;
+        }
+
+        .news-item {
+           padding:12px 0;
+           
+            transition: all 0.3s ease;
+            border-radius: 16px;
+            margin-bottom: 12px;
+            background: #fefeff;
+            
+            border-bottom: 2px dotted #6a3a0459;
+        
+        }
+
+        .news-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .news-item:hover {
+            background: #ffffff;
+            border-color: #e2e8f0;
+            transform: scale(1.02);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .news-item small {
+            color: #6366f1;
+            font-weight: 700;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        .news-item h6 {
+            color: #1e293b;
+            font-weight: 700;
+            font-size: 1rem;
+            margin-bottom: 6px;
+            line-height: 1.4;
+        }
+
+        .news-item p {
+            color: #64748b;
+            font-size: 0.9rem !important;
+            margin: 0 !important;
+        }
+
+        /* --- Highlighted Dept Card (CML) --- */
+        .dept-card.highlight-card {
+            border: 2px solid #0066ff !important;
+            background: linear-gradient(145deg, #ffffff 0%, #f0f7ff 100%) !important;
+            box-shadow: 0 15px 35px rgba(0, 102, 255, 0.25) !important;
+            position: relative;
+            overflow: visible !important;
+            /* Allow ribbon to show */
+            z-index: 5;
+            animation: highlightGlow 3s infinite alternate;
+        }
+
+        .dept-card.highlight-card .dept-badge {
+            background: #0066ff !important;
+            color: #fff !important;
+            font-weight: 800 !important;
+            transform: scale(1.1);
+        }
+
+        .dept-card.highlight-card .dept-name {
+            color: #0044cc !important;
+            font-weight: 800 !important;
+        }
+
+        @keyframes highlightGlow {
+            from {
+                border-color: #0066ff;
+                box-shadow: 0 15px 35px rgba(0, 102, 255, 0.25);
+            }
+
+            to {
+                border-color: #3b82f6;
+                box-shadow: 0 15px 45px rgba(0, 102, 255, 0.4);
+            }
+        }
+
+        .dept-card.highlight-card::after {
+            content: 'NEW SPECIALIZATION';
+            position: absolute;
+            top: 20px;
+            right: -30px;
+            background: #ffd700;
+            color: #000;
+            padding: 5px 35px;
+            font-size: 0.6rem;
+            font-weight: 900;
+            transform: rotate(45deg);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+        }
+
+        .dept-card.highlight-card .dept-icon-box {
+            background: #0066ff !important;
+            color: #ffffff !important;
+            box-shadow: 0 10px 15px rgba(0, 102, 255, 0.3);
+            animation: iconPulse 2s infinite ease-in-out;
+        }
+
+        @keyframes iconPulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .visitor-counter {
+                margin-top: 20px !important;
+                padding: 8px 15px !important;
+                font-size: 13px !important;
+                gap: 8px !important;
+            }
+
+            .visitor-counter .count-badge {
+                padding: 4px 10px !important;
+                font-size: 14px !important;
+            }
+
+            .visitor-counter i {
+                font-size: 16px !important;
+            }
+
+            .testimonial-comment p {
+                font-size: 0.95rem !important;
+                padding: 15px !important;
+                margin-bottom: 2rem !important;
+            }
+        }
+    </style>
+
+
+</head>
+
+<body class="home-page">
+
+    <div id="topbar"></div>
+    <div id="banner"></div>
+    <div id="navbar"></div>
+
+    <!-- Carousel Start -->
+    <video id="heroVideo" class="carousel-video" muted preload="auto" playsinline poster="/img/frontviewsvrec.jpeg">
+        <source src="./assets/svrecVedio.MP4" type="video/mp4">
+    </video>
+<!--div class="hero-video-container">
+<iframe
+id="heroVideo"
+class="carousel-video"
+width="100%"
+height="500"  src="https://www.youtube.com/embed/EwPN6hvCc7M" title="svrecVedio" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div-->
+    <!-- Carousel End -->
+
+    <!-- About Start -->
+    <div class="container-fluid about py-5">
+        <div class="container py-5">
+            <div class="row flex-row-reverse g-4 align-items-center">
+                <div class="col-lg-5">
+                    <div class="h-100 about-img-container"
+                        style="min-height: 400px; background: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .1)); border-radius: 10px; overflow: hidden;">
+                        <img src="img/svrecabout.jpeg" class="img-fluid w-100 h-100 abtimg" alt="svrecimage">
+                    </div>
+                </div>
+                <div class="col-lg-7 about-text-container"
+                    style="background: linear-gradient(rgba(255, 255, 255, .8), rgba(255, 255, 255, .8)), url(assets/abt.png);">
+                    <h2 class="section-about-title pe-3">About Us</h2>
+
+                    <p class="mb-4">Established in 2007, SVR Engineering College (SVREC) is
+                        a premier autonomous
+                        institution located on NH-18, just 7 km from Nandyal, Andhra Pradesh. The
+                        college is spread across a scenic 13-acre green campus, offering a peaceful and inspiring
+                        learning environment.
+
+                        SVREC is affiliated to JNTUA, Ananthapuramu, approved by AICTE, and accredited by NAAC. The ECE
+                        and CSE departments are NBA accredited, and the institute has been granted Autonomous Status
+                        from 2024–25.
+
+                        With modern infrastructure, advanced laboratories, smart classrooms, and a central library,
+                        SVREC delivers quality, industry-focused education. Equal importance is given to academics,
+                        innovation, extracurricular activities, and overall student development.</p>
+
+                    <a class=" rounded-pill py-3 px-5 mt-2 btnabt " href="/About.html">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+    <!-- Departments Start -->
+    <div class="container-fluid py-5 bg-light">
+        <div class="container py-5">
+            <!-- Header -->
+            <div class="dept-header">
+                <div class="badge">Academic Excellence</div>
+                <h1 class="title">Departments</h1>
+                <p class="subtitle">Join our specialized engineering programs designed to shape the future of technology
+                    and innovation.</p>
+            </div>
+
+            <!-- Grid -->
+            <div class="dept-grid">
+                <!-- Machine Learning -->
+                <a href="/CSE.html" class="dept-card highlight-card">
+                    <div class="dept-icon-box">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="dept-badge">CML</div>
+                    <h3 class="dept-name">Computer Science & Engineering ( Artificial Intelligence & Machine Learning)</h3>
+                    <p class="dept-desc">Specializing in artificial intelligence, machine learning algorithms, deep
+                        learning,
+                        data analytics, and intelligent system development.</p>
+
+                    <div class="dept-explore">
+                        Explore Department <i class="fas fa-arrow-right"></i>
+                    </div>
+                </a>
+
+                <!-- AI -->
+                <a href="/CAI.html" class="dept-card">
+                    <div class="dept-icon-box">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="dept-badge">CAI</div>
+                    <h3 class="dept-name">Computer Science & Engineering(Artificial Intelligence)</h3>
+                    <p class="dept-desc">Master intelligent systems and machine learning algorithms to solve complex
+                        global challenges.</p>
+
+                    <div class="dept-explore">
+                        Explore Department <i class="fas fa-arrow-right"></i>
+                    </div>
+                </a>
+                <!-- Data Science -->
+                <a href="/C-DS.html" class="dept-card">
+                    <div class="dept-icon-box">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <div class="dept-badge">CDS</div>
+                    <h3 class="dept-name"> Computer Science & Engineering(Data Science)</h3>
+                    <p class="dept-desc">Transforming massive amounts of complex data into actionable business insights
+                        and intelligence.</p>
+
+                    <div class="dept-explore">
+                        Explore Department <i class="fas fa-arrow-right"></i>
+                    </div>
+                </a>
+
+
+                <!-- Computer Science -->
+                <a href="/CSE.html" class="dept-card">
+                    <div class="dept-icon-box">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="dept-badge">CSE</div>
+                    <h3 class="dept-name">Computer Science & Engineering</h3>
+                    <p class="dept-desc">Developing expertise in software engineering, algorithms, and cutting-edge
+                        cloud technologies.</p>
+
+                    <div class="dept-explore">
+                        Explore Department <i class="fas fa-arrow-right"></i>
+                    </div>
+                </a>
+
+                <!-- Electronics -->
+                <a href="/ECE.html" class="dept-card">
+                    <div class="dept-icon-box">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <div class="dept-badge">ECE</div>
+                    <h3 class="dept-name">Electronics & Communication Engineering</h3>
+                    <p class="dept-desc">Exploration of embedded systems, telecommunications, and high-speed
+                        communication technologies.</p>
+
+                    <div class="dept-explore">
+                        Explore Department <i class="fas fa-arrow-right"></i>
+                    </div>
+                </a>
+
+                <!-- Electrical -->
+                <a href="/EEE.html" class="dept-card">
+                    <div class="dept-icon-box">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="dept-badge">EEE</div>
+                    <h3 class="dept-name">Electrical & Electronics Engineering</h3>
+                    <p class="dept-desc">Mastering power systems, smart grids, and renewable energy solutions for a
+                        greener future.</p>
+
+                    <div class="dept-explore">
+                        Explore Department <i class="fas fa-arrow-right"></i>
+                    </div>
+                </a>
+                <!-- Civil Engineering -->
+                <a href="/CIVIL.html" class="dept-card">
+                    <div class="dept-icon-box">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="dept-badge">CIVIL</div>
+                    <h3 class="dept-name">Civil Engineering</h3>
+                    <p class="dept-desc">Learn to design and build sustainable infrastructure for the modern world with
+                        advanced engineering.</p>
+
+                    <div class="dept-explore">
+                        Explore Department <i class="fas fa-arrow-right"></i>
+                    </div>
+                </a>
+
+                <!-- Mechanical -->
+                <a href="/MECH.html" class="dept-card">
+                    <div class="dept-icon-box">
+                        <i class="fas fa-cog"></i>
+                    </div>
+                    <div class="dept-badge">MEC</div>
+                    <h3 class="dept-name">Mechanical Engineering</h3>
+                    <p class="dept-desc">Designing next-generation mechanical systems using advanced CAD/CAM and
+                        automation techniques.</p>
+
+                    <div class="dept-explore">
+                        Explore Department <i class="fas fa-arrow-right"></i>
+                    </div>
+                </a>
+
+
+
+                <!-- Digital Marketing / MBA -->
+                <a href="/MBA.html" class="dept-card">
+                    <div class="dept-icon-box">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="dept-badge">MBA</div>
+                    <h3 class="dept-name">Master of Business Administration</h3>
+                    <p class="dept-desc">Develop leadership and management skills to excel in the global business
+                        environment and entrepreneurship.</p>
+
+                    <div class="dept-explore">
+                        Explore Department <i class="fas fa-arrow-right"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Departments End -->
+
+    <!-- News Start -->
+
+    <section class="py-5" style="background:#f4f6fb;">
+        <div class="container">
+
+            <h2 class="text-center mb-3 fw-bold">Latest Updates</h2>
+            <p class="text-center text-muted mb-5">
+                Stay informed with Circulars, Examinations and Placement Updates
+            </p>
+
+            <div class="row g-4 d-flex align-items-stretch">
+
+                <!-- ================= NEWS ================= -->
+                <div class="col-md-4 d-flex">
+                    <div class="card shadow-sm w-100 news-card">
+                        <div class="card-header" style="--header-bg: #1d4ed8; --header-accent: #3b82f6;">
+                            <i class=" me-2">📢</i> News
+                        </div>
+
+                        <div class="card-body news-body" id="circular-content">
+
+                            <div class="news-item">
+                                <small class="text-muted">05 Feb 2026</small>
+                                <h6>Revised Academic Calendar</h6>
+                                <p>Updated semester schedule released.</p>
+                                <a href="assets/pdfs/academic-calendar.pdf" download class="pdf-download">
+                                    <i class="fas fa-file-pdf"></i>PDF
+                                </a>
+                            </div>
+
+                            <div class="news-item">
+                                <small class="text-muted">02 Feb 2026</small>
+                                <h6>Fee Payment Notification</h6>
+                                <p>Last date for fee payment is Feb 20.</p>
+                            </div>
+                            <div class="news-item">
+                                <small class="text-muted">02 Feb 2026</small>
+                                <h6>Fee Payment Notification</h6>
+                                <p>Last date for fee payment is Feb 20.</p>
+                            </div>
+                            <div class="news-item">
+                                <small class="text-muted">02 Feb 2026</small>
+                                <h6>Fee Payment Notification</h6>
+                                <p>Last date for fee payment is Feb 20.</p>
+                            </div>
+                            <div class="news-item">
+                                <small class="text-muted">28 Jan 2026</small>
+                                <h6>Anti-Ragging Form Submission</h6>
+                                <p>Submit online before deadline.</p>
+                            </div>
+
+                            <div class="news-item">
+                                <small class="text-muted">20 Jan 2026</small>
+                                <h6>Scholarship Applications Open</h6>
+                                <p>Apply through student portal.</p>
+                            </div>
+
+                            <div class="news-item">
+                                <small class="text-muted">15 Jan 2026</small>
+                                <h6>Library Timings Extended</h6>
+                                <p>Library open till 9:00 PM.</p>
+                                <a href="assets/pdfs/academic-calendar.pdf" download class="pdf-download">
+                                    <i class="fas fa-file-pdf"></i>PDF
+                                </a>
+                            </div>
+
+                        </div>
+
+                        <div class="text-center p-2" id="circular-pagination"></div>
+                    </div>
+                </div>
+
+                <!-- ================= EXAMINATIONS ================= -->
+                <div class="col-md-4 d-flex">
+                    <div class="card shadow-sm w-100 news-card">
+                        <div class="card-header" style="--header-bg: #059669; --header-accent: #10b981;">
+                            <i class=" me-2">📋 </i> Examinations
+                        </div>
+
+                        <div class="card-body news-body" id="exam-content">
+
+                            <div class="news-item">
+                                <small class="text-muted">10 Feb 2026</small>
+                                <h6>Mid-Sem Exam Schedule</h6>
+                                <p>Time table released.</p>
+                            </div>
+
+                            <div class="news-item">
+                                <small class="text-muted">04 Feb 2026</small>
+                                <h6>B.Tech Results Published</h6>
+
+                                <p>Check results online.</p>
+                                <span class="news-badge badge-important">IMPORTANT</span>
+                            </div>
+
+                            <div class="news-item">
+                                <small class="text-muted">01 Feb 2026</small>
+                                <h6>Supplementary Exam Notification</h6>
+                                <p>Apply before Feb 18.</p>
+                            </div>
+
+                            <div class="news-item">
+                                <small class="text-muted">25 Jan 2026</small>
+                                <h6>Internal Marks Uploaded</h6>
+                                <p>Marks available in portal.</p>
+
+                            </div>
+
+                            <div class="news-item">
+                                <small class="text-muted">18 Jan 2026</small>
+                                <h6>Practical Exams Start</h6>
+                                <p>Practical exams from March 1.</p>
+                            </div>
+
+                        </div>
+
+                        <div class="text-center p-2" id="exam-pagination"></div>
+                    </div>
+                </div>
+
+                <!-- ================= PLACEMENTS ================= -->
+                <div class="col-md-4 d-flex">
+                    <div class="card shadow-sm w-100 news-card">
+                        <div class="card-header" style="--header-bg: #ea580c; --header-accent: #f97316;">
+                            <i class=" me-2">🏢</i> Placements
+                        </div>
+
+                        <div class="card-body news-body" id="placement-content">
+
+                            <div class="news-item">
+                                <small class="text-muted">12 Feb 2026</small>
+                                <h6>Infosys Campus Drive</h6>
+                                <p>Drive on Feb 25.</p>
+                            </div>
+
+                            <div class="news-item">
+                                <span class="news-badge badge-new">NEW</span>
+                                <small class="text-muted">08 Feb 2026</small>
+                                <h6>TCS NQT Registration</h6>
+
+                                <p>Register before deadline.</p>
+
+                            </div>
+
+                            <div class="news-item">
+                                <small class="text-muted">05 Feb 2026</small>
+                                <h6>Placement Training Program</h6>
+                                <p>Starts Feb 15.</p>
+                            </div>
+
+                            <div class="news-item">
+                                <small class="text-muted">30 Jan 2026</small>
+                                <h6>Wipro Results Announced</h6>
+                                <p>Selected students list published.</p>
+
+                            </div>
+
+                            <div class="news-item">
+                                <small class="text-muted">22 Jan 2026</small>
+                                <h6>Internship Opportunities</h6>
+                                <p>Apply for Summer 2026 internships.</p>
+                            </div>
+
+                        </div>
+
+                        <div class="text-center p-2" id="placement-pagination"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- News End -->
+
+    <!-- Gallery Start -->
+    <div class="container-fluid gallery py-5 my-5">
+        <div class="mx-auto text-center mb-5 section-header-container">
+            <h1 class="mb-4">Gallery</h1>
+            <p class="mb-0">Explore a vibrant collection of moments showcasing campus life, academic activities,
+                cultural events, workshops, sports, and student achievements at SVREC. Experience the spirit, energy,
+                and excellence of our institution through visuals
+            </p>
+        </div>
+        <div class="tab-class text-center">
+            <ul class="nav nav-pills d-inline-flex justify-content-center mb-5">
+                <li class="nav-item">
+                    <a class="d-flex mx-3 py-2 border border-primary bg-light rounded-pill active" data-bs-toggle="pill"
+                        href="#GalleryTab-1">
+                        <span class="text-dark" style="width: 150px;">All</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="d-flex py-2 mx-3 border border-primary bg-light rounded-pill" data-bs-toggle="pill"
+                        href="#GalleryTab-2">
+                        <span class="text-dark" style="width: 150px;">Campus</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="d-flex mx-3 py-2 border border-primary bg-light rounded-pill" data-bs-toggle="pill"
+                        href="#GalleryTab-3">
+                        <span class="text-dark" style="width: 150px;">Events</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="d-flex mx-3 py-2 border border-primary bg-light rounded-pill" data-bs-toggle="pill"
+                        href="#GalleryTab-5">
+                        <span class="text-dark" style="width: 150px;">Labs</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <!-- All Photos Tab - ALL PHOTOS DISPLAYED -->
+                <div id="GalleryTab-1" class="tab-pane fade show p-0 active">
+                    <div class="row g-2">
+                        <!-- ALL CAMPUS PHOTOS - 6 images -->
+                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-2">
+                            <div class="gallery-item h-100">
+                                <img src="/img/ncc7.jpeg" class="img-fluid w-100 h-100 rounded" alt="Campus Image">
+                                <div class="gallery-content">
+                                    <div class="gallery-info">
+                                        <h5 class="text-white text-uppercase mb-2">Main Building</h5>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-2">
+                            <div class="gallery-item h-100">
+                                <img src="img/lib2.jpg" class="img-fluid w-100 h-100 rounded" alt="Campus Image">
+                                <div class="gallery-content">
+                                    <div class="gallery-info">
+                                        <h5 class="text-white text-uppercase mb-2">Library interior</h5>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-2">
+                            <div class="gallery-item h-100">
+                                <img src="img/lib3.jpg" class="img-fluid w-100 h-100 rounded" alt="Campus Image">
+                                <div class="gallery-content">
+                                    <div class="gallery-info">
+                                        <h5 class="text-white text-uppercase mb-2">Library</h5>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-2">
+                            <div class="gallery-item h-100">
+                                <img src="img/gdg5.jpeg" class="img-fluid w-100 h-100 rounded" alt="Campus Image">
+                                <div class="gallery-content">
+                                    <div class="gallery-info">
+                                        <h5 class="text-white text-uppercase mb-2">Auditorium</h5>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-2">
+                            <div class="gallery-item h-100">
+                                <img src="img/snova4.jpeg" class="img-fluid w-100 h-100 rounded" alt="Campus Image">
+                                <div class="gallery-content">
+                                    <div class="gallery-info">
+                                        <h5 class="text-white text-uppercase mb-2">Sports Ground</h5>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-2">
+                            <div class="gallery-item h-100">
+                                <img src="/img/campus1.jpeg" class="img-fluid w-100 h-100 rounded" alt="Campus Image">
+                                <div class="gallery-content">
+                                    <div class="gallery-info">
+                                        <h5 class="text-white text-uppercase mb-2">Main Building</h5>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- ALL EVENT PHOTOS - 5 images -->
+                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-2">
+                            <div class="gallery-item h-100">
+                                <img src="img/gdg2.jpeg" class="img-fluid w-100 h-100 rounded" alt="Event Image">
+                                <div class="gallery-content">
+                                    <div class="gallery-info">
+                                        <h5 class="text-white text-uppercase mb-2">Technical Fest</h5>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-2">
+                            <div class="gallery-item h-100">
+                                <img src="img/gdg3.jpeg" class="img-fluid w-100 h-100 rounded" alt="Event Image">
+                                <div class="gallery-content">
+                                    <div class="gallery-info">
+                                        <h5 class="text-white text-uppercase mb-2">Technical Fest</h5>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-2">
+                            <div class="gallery-item h-100">
+                                <img src="img/event11.jpeg" class="img-fluid w-100 h-100 rounded" alt="Event Image">
+                                <div class="gallery-content">
+                                    <div class="gallery-info">
+                                        <h5 class="text-white text-uppercase mb-2">Cultural Day</h5>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-2">
+                            <div class="gallery-item h-100">
+                                <img src="img/event10.jpeg" class="img-fluid w-100 h-100 rounded" alt="Event Image">
+                                <div class="gallery-content">
+                                    <div class="gallery-info">
+                                        <h5 class="text-white text-uppercase mb-2">Workshop</h5>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-2">
+                            <div class="gallery-item h-100">
+                                <img src="img/event17.jpeg" class="img-fluid w-100 h-100 rounded" alt="Event Image">
+                                <div class="gallery-content">
+                                    <div class="gallery-info">
+                                        <h5 class="text-white text-uppercase mb-2">Annual Day</h5>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- ALL LAB PHOTOS - 5 images -->
+                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-2">
+                            <div class="gallery-item h-100">
+                                <img src="img/lab6.jpeg" class="img-fluid w-100 h-100 rounded" alt="Lab Image">
+                                <div class="gallery-content">
+                                    <div class="gallery-info">
+                                        <h5 class="text-white text-uppercase mb-2">Computer Lab</h5>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-2">
+                            <div class="gallery-item h-100">
+                                <img src="img/labai.jpg" class="img-fluid w-100 h-100 rounded" alt="Lab Image">
+                                <div class="gallery-content">
+                                    <div class="gallery-info">
+                                        <h5 class="text-white text-uppercase mb-2">Computer Lab</h5>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-2">
+                            <div class="gallery-item h-100">
+                                <img src="img/labece.jpg" class="img-fluid w-100 h-100 rounded" alt="Lab Image">
+                                <div class="gallery-content">
+                                    <div class="gallery-info">
+                                        <h5 class="text-white text-uppercase mb-2">Electronics Lab</h5>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-2">
+                            <div class="gallery-item h-100">
+                                <img src="img/labmec.jpg" class="img-fluid w-100 h-100 rounded" alt="Lab Image">
+                                <div class="gallery-content">
+                                    <div class="gallery-info">
+                                        <h5 class="text-white text-uppercase mb-2">Mechanics Lab</h5>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-2">
+                            <div class="gallery-item h-100">
+                                <img src="img/labds.jpg" class="img-fluid w-100 h-100 rounded" alt="Lab Image">
+                                <div class="gallery-content">
+                                    <div class="gallery-info">
+                                        <h5 class="text-white text-uppercase mb-2">Data Science Lab</h5>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Extra column to complete the row (empty div to maintain grid balance) -->
+                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-2 d-none d-xl-block"></div>
+                    </div>
+
+                </div>
+
+                <!-- Campus Tab - 4 Photos Only -->
+                <div id="GalleryTab-2" class="tab-pane fade show p-0">
+                    <div class="row g-2">
+                        <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3">
+                            <div class="gallery-item h-100">
+                                <img src="/img/campus1.jpeg" class="img-fluid w-100 h-100 rounded" alt="Campus Image">
+                                <div class="gallery-content">
+                                    <div class="gallery-info">
+                                        <h5 class="text-white text-uppercase mb-2">Main Building</h5>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3">
+                            <div class="gallery-item h-100">
+                                <img src="img/lib3.jpg" class="img-fluid w-100 h-100 rounded" alt="Campus Image">
+                                <div class="gallery-content">
+                                    <div class="gallery-info">
+                                        <h5 class="text-white text-uppercase mb-2">Library</h5>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3">
+                            <div class="gallery-item h-100">
+                                <img src="img/gdg5.jpeg" class="img-fluid w-100 h-100 rounded" alt="Campus Image">
+                                <div class="gallery-content">
+                                    <div class="gallery-info">
+                                        <h5 class="text-white text-uppercase mb-2">Auditorium</h5>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3">
+                            <div class="gallery-item h-100">
+                                <img src="img/snova4.jpeg" class="img-fluid w-100 h-100 rounded" alt="Campus Image">
+                                <div class="gallery-content">
+                                    <div class="gallery-info">
+                                        <h5 class="text-white text-uppercase mb-2">Sports Ground</h5>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Events Tab - 4 Photos Only -->
+                <div id="GalleryTab-3" class="tab-pane fade show p-0">
+                    <div class="row g-2">
+                        <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3">
+                            <div class="gallery-item h-100">
+                                <img src="img/gdg3.jpeg" class="img-fluid w-100 h-100 rounded" alt="Event Image">
+                                <div class="gallery-content">
+                                    <div class="gallery-info">
+                                        <h5 class="text-white text-uppercase mb-2">Technical Fest</h5>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3">
+                            <div class="gallery-item h-100">
+                                <img src="img/event11.jpeg" class="img-fluid w-100 h-100 rounded" alt="Event Image">
+                                <div class="gallery-content">
+                                    <div class="gallery-info">
+                                        <h5 class="text-white text-uppercase mb-2">Cultural Day</h5>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3">
+                            <div class="gallery-item h-100">
+                                <img src="img/event10.jpeg" class="img-fluid w-100 h-100 rounded" alt="Event Image">
+                                <div class="gallery-content">
+                                    <div class="gallery-info">
+                                        <h5 class="text-white text-uppercase mb-2">Workshop</h5>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3">
+                            <div class="gallery-item h-100">
+                                <img src="img/event17.jpeg" class="img-fluid w-100 h-100 rounded" alt="Event Image">
+                                <div class="gallery-content">
+                                    <div class="gallery-info">
+                                        <h5 class="text-white text-uppercase mb-2">Annual Day</h5>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div id="GalleryTab-5" class="tab-pane fade show p-0">
+                    <div class="row g-2">
+                        <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3">
+                            <div class="gallery-item h-100">
+                                <img src="img/labai.jpg" class="img-fluid w-100 h-100 rounded" alt="Lab Image">
+                                <div class="gallery-content">
+                                    <div class="gallery-info">
+                                        <h5 class="text-white text-uppercase mb-2">Computer Lab</h5>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3">
+                            <div class="gallery-item h-100">
+                                <img src="img/labece.jpg" class="img-fluid w-100 h-100 rounded" alt="Lab Image">
+                                <div class="gallery-content">
+                                    <div class="gallery-info">
+                                        <h5 class="text-white text-uppercase mb-2">Electronics Lab</h5>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3">
+                            <div class="gallery-item h-100">
+                                <img src="img/labmec.jpg" class="img-fluid w-100 h-100 rounded" alt="Lab Image">
+                                <div class="gallery-content">
+                                    <div class="gallery-info">
+                                        <h5 class="text-white text-uppercase mb-2">Mechanics Lab</h5>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3">
+                            <div class="gallery-item h-100">
+                                <img src="img/labds.jpg" class="img-fluid w-100 h-100 rounded" alt="Lab Image">
+                                <div class="gallery-content">
+                                    <div class="gallery-info">
+                                        <h5 class="text-white text-uppercase mb-2">Data Science Lab</h5>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Show More Button for Labs Tab -->
+                <div class="text-center mt-5">
+                    <a href="gallery.html" class=" btnabt ">Show More Labs <i
+                            class="fa fa-arrow-right ms-2"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Gallery End -->
+
+
+    <!-- Testimonial Start -->
+    <div class="container-fluid testimonial py-5">
+        <div class="container py-5">
+            <div class="mx-auto text-center mb-5" style="max-width: 900px;">
+                <h5 class="section-title px-3">Testimonial</h5>
+                <h1 class="mb-0">Our Students Say!!!</h1>
+            </div>
+            <div class="testimonial-carousel owl-carousel owl-theme pt-3">
+
+                <!-- Student 1-->
+                <div class="testimonial-item text-center rounded pb-4">
+                    <div class="testimonial-comment bg-light rounded p-4">
+                        <p class="text-center mb-5">"The campus and faculty at SVREC enhanced my skills, and the
+                            placement cell helped me get placed in three companies. SVREC adds value to life beyond
+                            education."</p>
+                    </div>
+                    <div class="testimonial-img p-1">
+                        <img src="/img/Ayesha.jpeg" class="img-fluid rounded-circle"
+                            alt="S.Alfinia - TCS Digital, Infosys & Tech Mahindra">
+                    </div>
+                    <div class="testimonial-info">
+                        <h5 class="mb-0">P. Ayesha</h5>
+                        <p class="mb-0">TCS Digital, Infosys & Tech Mahindra</p>
+                        <div class="d-flex justify-content-center">
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <i class="fas fa-star" style="color: #cbd5e0;"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Student 2-->
+                <div class="testimonial-item text-center rounded pb-4">
+                    <div class="testimonial-comment bg-light rounded p-4">
+                        <p class="text-center mb-5">"SVREC provided a student-friendly learning environment and
+                            supportive faculty, helping me improve my programming and cognitive skills and succeed in
+                            engineering."</p>
+                    </div>
+                    <div class="testimonial-img p-1">
+                        <img src="/img/bhavana.jpeg" class="img-fluid rounded-circle" alt="S.Rayhan - Infosys & TCS">
+                    </div>
+                    <div class="testimonial-info">
+                        <h5 class="mb-0">C. Bhavana</h5>
+                        <p class="mb-0">Infosys & TCS</p>
+                        <div class="d-flex justify-content-center">
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <i class="fas fa-star" style="color: #cbd5e0;"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Student 3 -->
+                <div class="testimonial-item text-center rounded pb-4">
+                    <div class="testimonial-comment bg-light rounded p-4">
+                        <p class="text-center mb-5">"SVREC helped me achieve my goals through excellent training and
+                            placement support. I am now confidently working at DBS with a great package."</p>
+                    </div>
+                    <div class="testimonial-img p-1">
+                        <img src="/img/siri.jpeg" class="img-fluid rounded-circle" alt="V.Aruna Kumari - DBS">
+                    </div>
+                    <div class="testimonial-info">
+                        <h5 class="mb-0">N. Sirisha</h5>
+                        <p class="mb-0">DBS</p>
+                        <div class="d-flex justify-content-center">
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <i class="fas fa-star" style="color: #cbd5e0;"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Student 4-->
+                <div class="testimonial-item text-center rounded pb-4">
+                    <div class="testimonial-comment bg-light rounded p-4">
+                        <p class="text-center mb-5">"My experience at SVREC was memorable. The college encouraged me to
+                            think differently, which helped me grow and secure placements in top companies."</p>
+                    </div>
+                    <div class="testimonial-img p-1">
+                        <img src="/img/sri vedha.jpeg" class="img-fluid rounded-circle"
+                            alt="G.V.S.Katyayani - TCS & Infosys">
+                    </div>
+                    <div class="testimonial-info">
+                        <h5 class="mb-0">Sri Vedha</h5>
+                        <p class="mb-0">TCS & Infosys</p>
+                        <div class="d-flex justify-content-center">
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                            <i class="fas fa-star" style="color: #ffd700;"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+
+    <div id="footer"></div>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary btn-primary-outline-0 btn-md-square back-to-top"><i
+            class="fa fa-arrow-up"></i></a>
+
+<script 
+  src="http://127.0.0.1:8000/static/chatbot-widget.js" 
+  data-api="http://127.0.0.1:8000">
+</script>
+    <script>
+
+        (function () {
+            try {
+                // ===== RESET COUNTER TO 1 =====
+                // Remove all existing counter data
+                localStorage.removeItem('svrec_total_visits');
+                localStorage.removeItem('svrec_bottom_counter');
+                localStorage.removeItem('svrec_footer_visitor');
+                localStorage.removeItem('svrec_page_views');
+                localStorage.removeItem('pageVisitorCount');
+                localStorage.removeItem('svrec_visitor_count');
+                sessionStorage.removeItem('svrec_session_counted');
+                // ================================
+
+                // Set counter to 1
+                let totalVisits = 1;
+                localStorage.setItem('svrec_total_visits', totalVisits);
+                sessionStorage.setItem('svrec_session_counted', 'true');
+
+                // Format count with commas
+                let formattedCount = totalVisits.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
+                // Function to add counter at the very bottom RIGHT
+                function addCounterAtBottom() {
+                    // Check if counter already exists
+                    if (document.getElementById('footer-visitor-counter')) {
+                        // Update existing counter with current count
+                        const existingCounter = document.getElementById('footer-visitor-counter');
+                        const countSpan = existingCounter.querySelector('span:last-child');
+                        if (countSpan) {
+                            countSpan.textContent = formattedCount;
+                        }
+                        return;
+                    }
+
+
+                    // Create counter element
+                    const counterDiv = document.createElement('div');
+                    counterDiv.id = 'footer-visitor-counter';
+                    counterDiv.style.cssText = 'position:relative; width:100%; background:transparent; margin:0; padding:0; clear:both;';
+
+                    counterDiv.innerHTML = `
+  <div class="visitor-counter">
+      <i class="fas fa-eye"></i>
+      <span>PAGE VISITORS:</span>
+      <span class="count-badge">${formattedCount}</span>
+  </div>
+`;
+
+
+                    // Find footer and insert counter BEFORE it
+                    const footer = document.getElementById('footer');
+                    if (footer && footer.parentNode) {
+                        footer.parentNode.insertBefore(counterDiv, footer);
+                        console.log('Visitor counter reset to 1');
+                    }
+                }
+
+                // Try to add counter after footer loads - Single delayed check for efficiency
+                setTimeout(addCounterAtBottom, 500);
+
+                // Watch for footer to load more reliably with a cleaner observer
+                const footerObserver = setInterval(function () {
+                    const footer = document.getElementById('footer');
+                    if (footer && footer.innerHTML.trim() !== '') {
+                        addCounterAtBottom();
+                        clearInterval(footerObserver);
+                    }
+                }, 500);
+
+            } catch (e) {
+                console.log('Counter error:', e);
+            }
+        })();
+
+        // Footer is handled by js/footer.js - removed redundant fetch here
+    </script>
+    <!-- jQuery FIRST -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugins -->
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Your JS -->
+    <script src="js/main.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/footer.js"></script>
+    <!-- to here and paste it in respective javascript -->
+</body>
+
+</html>
